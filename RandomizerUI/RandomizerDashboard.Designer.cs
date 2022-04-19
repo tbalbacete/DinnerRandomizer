@@ -30,7 +30,7 @@
         {
             this.dashboardHeaderLabel = new System.Windows.Forms.Label();
             this.recipeNameTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.recipeLabel = new System.Windows.Forms.Label();
             this.ingredientsListBox = new System.Windows.Forms.ListBox();
             this.ingredientsListLabel = new System.Windows.Forms.Label();
             this.generateRandomRecipeButton = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.dashboardHeaderLabel.ForeColor = System.Drawing.Color.Brown;
             this.dashboardHeaderLabel.Location = new System.Drawing.Point(239, 54);
             this.dashboardHeaderLabel.Name = "dashboardHeaderLabel";
-            this.dashboardHeaderLabel.Size = new System.Drawing.Size(397, 60);
+            this.dashboardHeaderLabel.Size = new System.Drawing.Size(386, 59);
             this.dashboardHeaderLabel.TabIndex = 0;
             this.dashboardHeaderLabel.Text = "Recipe Randomizer";
             // 
@@ -57,16 +57,16 @@
             this.recipeNameTextBox.TabIndex = 1;
             this.recipeNameTextBox.Text = "name of recipe";
             // 
-            // label1
+            // recipeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Brown;
-            this.label1.Location = new System.Drawing.Point(584, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 46);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Recipe";
+            this.recipeLabel.AutoSize = true;
+            this.recipeLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.recipeLabel.ForeColor = System.Drawing.Color.Brown;
+            this.recipeLabel.Location = new System.Drawing.Point(584, 129);
+            this.recipeLabel.Name = "recipeLabel";
+            this.recipeLabel.Size = new System.Drawing.Size(115, 45);
+            this.recipeLabel.TabIndex = 2;
+            this.recipeLabel.Text = "Recipe";
             // 
             // ingredientsListBox
             // 
@@ -85,7 +85,7 @@
             this.ingredientsListLabel.ForeColor = System.Drawing.Color.Brown;
             this.ingredientsListLabel.Location = new System.Drawing.Point(551, 243);
             this.ingredientsListLabel.Name = "ingredientsListLabel";
-            this.ingredientsListLabel.Size = new System.Drawing.Size(189, 46);
+            this.ingredientsListLabel.Size = new System.Drawing.Size(183, 45);
             this.ingredientsListLabel.TabIndex = 4;
             this.ingredientsListLabel.Text = "Ingredients";
             // 
@@ -119,11 +119,11 @@
             this.Controls.Add(this.generateRandomRecipeButton);
             this.Controls.Add(this.ingredientsListLabel);
             this.Controls.Add(this.ingredientsListBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.recipeLabel);
             this.Controls.Add(this.recipeNameTextBox);
             this.Controls.Add(this.dashboardHeaderLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "RandomizerDashboard";
             this.Text = "Recipe Randomizer";
             this.ResumeLayout(false);
@@ -135,7 +135,7 @@
 
         private Label dashboardHeaderLabel;
         private TextBox recipeNameTextBox;
-        private Label label1;
+        private Label recipeLabel;
         private ListBox ingredientsListBox;
         private Label ingredientsListLabel;
         private Button generateRandomRecipeButton;

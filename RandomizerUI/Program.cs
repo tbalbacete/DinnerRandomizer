@@ -1,3 +1,5 @@
+using DinnerRandomizerLibrary.DataAccess;
+
 namespace RandomizerUI
 {
     internal static class Program
@@ -10,8 +12,9 @@ namespace RandomizerUI
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            DinnerRandomizerLibrary.GlobalConfig.InitializeConnections(DatabaseType.TextFile);
             ApplicationConfiguration.Initialize();
-            Application.Run(new RandomizerDashboard());
+            Application.Run(new AddRecipeForm());
         }
     }
 }
