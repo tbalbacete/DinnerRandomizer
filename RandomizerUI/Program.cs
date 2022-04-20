@@ -14,7 +14,7 @@ namespace RandomizerUI
             // see https://aka.ms/applicationconfiguration.
             DinnerRandomizerLibrary.GlobalConfig.InitializeConnections(DatabaseType.TextFile);
             ApplicationConfiguration.Initialize();
-            Application.Run(new AddRecipeForm());
+            Application.Run(new RandomizerDashboard());
         }
     }
 }

@@ -98,6 +98,7 @@
             this.generateRandomRecipeButton.TabIndex = 5;
             this.generateRandomRecipeButton.Text = "Find Random Recipe";
             this.generateRandomRecipeButton.UseVisualStyleBackColor = false;
+            this.generateRandomRecipeButton.Click += new System.EventHandler(this.generateRandomRecipeButton_Click);
             // 
             // createNewRecipeButton
             // 
@@ -108,6 +109,7 @@
             this.createNewRecipeButton.TabIndex = 6;
             this.createNewRecipeButton.Text = "Add New Recipe";
             this.createNewRecipeButton.UseVisualStyleBackColor = false;
+            this.createNewRecipeButton.Click += new System.EventHandler(this.createNewRecipeButton_Click);
             // 
             // RandomizerDashboard
             // 
