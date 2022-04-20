@@ -37,6 +37,8 @@
             this.availableIngredientsDropDown = new System.Windows.Forms.ComboBox();
             this.availableIngredientsLabel = new System.Windows.Forms.Label();
             this.addIngredientButton = new System.Windows.Forms.Button();
+            this.newRecipeLabel = new System.Windows.Forms.Label();
+            this.newRecipeNameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // existingRecipesListBox
@@ -46,7 +48,7 @@
             this.existingRecipesListBox.ItemHeight = 41;
             this.existingRecipesListBox.Location = new System.Drawing.Point(12, 138);
             this.existingRecipesListBox.Name = "existingRecipesListBox";
-            this.existingRecipesListBox.Size = new System.Drawing.Size(366, 414);
+            this.existingRecipesListBox.Size = new System.Drawing.Size(366, 537);
             this.existingRecipesListBox.TabIndex = 0;
             // 
             // existingRecipesLabel
@@ -74,7 +76,7 @@
             this.addedIngredientsListBox.ItemHeight = 41;
             this.addedIngredientsListBox.Location = new System.Drawing.Point(793, 138);
             this.addedIngredientsListBox.Name = "addedIngredientsListBox";
-            this.addedIngredientsListBox.Size = new System.Drawing.Size(366, 414);
+            this.addedIngredientsListBox.Size = new System.Drawing.Size(366, 537);
             this.addedIngredientsListBox.TabIndex = 2;
             // 
             // addRecipeHeaderLabel
@@ -91,12 +93,13 @@
             // 
             this.addRecipeButton.BackColor = System.Drawing.SystemColors.Menu;
             this.addRecipeButton.ForeColor = System.Drawing.Color.Black;
-            this.addRecipeButton.Location = new System.Drawing.Point(429, 470);
+            this.addRecipeButton.Location = new System.Drawing.Point(429, 572);
             this.addRecipeButton.Name = "addRecipeButton";
             this.addRecipeButton.Size = new System.Drawing.Size(319, 81);
             this.addRecipeButton.TabIndex = 6;
             this.addRecipeButton.Text = "Add Recipe";
             this.addRecipeButton.UseVisualStyleBackColor = false;
+            this.addRecipeButton.Click += new System.EventHandler(this.addRecipeButton_Click);
             // 
             // availableIngredientsDropDown
             // 
@@ -125,13 +128,32 @@
             this.addIngredientButton.TabIndex = 9;
             this.addIngredientButton.Text = "Add Ingredient";
             this.addIngredientButton.UseVisualStyleBackColor = false;
+            this.addIngredientButton.Click += new System.EventHandler(this.addIngredientButton_Click);
+            // 
+            // newRecipeLabel
+            // 
+            this.newRecipeLabel.AutoSize = true;
+            this.newRecipeLabel.Location = new System.Drawing.Point(460, 441);
+            this.newRecipeLabel.Name = "newRecipeLabel";
+            this.newRecipeLabel.Size = new System.Drawing.Size(261, 41);
+            this.newRecipeLabel.TabIndex = 10;
+            this.newRecipeLabel.Text = "New Recipe Name";
+            // 
+            // newRecipeNameTextBox
+            // 
+            this.newRecipeNameTextBox.Location = new System.Drawing.Point(429, 500);
+            this.newRecipeNameTextBox.Name = "newRecipeNameTextBox";
+            this.newRecipeNameTextBox.Size = new System.Drawing.Size(319, 47);
+            this.newRecipeNameTextBox.TabIndex = 11;
             // 
             // AddRecipeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1166, 563);
+            this.ClientSize = new System.Drawing.Size(1214, 697);
+            this.Controls.Add(this.newRecipeNameTextBox);
+            this.Controls.Add(this.newRecipeLabel);
             this.Controls.Add(this.addIngredientButton);
             this.Controls.Add(this.availableIngredientsLabel);
             this.Controls.Add(this.availableIngredientsDropDown);
@@ -162,5 +184,7 @@
         private ComboBox availableIngredientsDropDown;
         private Label availableIngredientsLabel;
         private Button addIngredientButton;
+        private Label newRecipeLabel;
+        private TextBox newRecipeNameTextBox;
     }
 }

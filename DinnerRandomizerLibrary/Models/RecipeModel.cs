@@ -10,6 +10,6 @@ namespace DinnerRandomizerLibrary.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<StapleIngredientsEnum> Ingredients { get; set; }
+        public List<StapleIngredientsEnum> Ingredients { get; set; } = new List<StapleIngredientsEnum>();
     }
 }

@@ -1,4 +1,5 @@
-﻿using DinnerRandomizerLibrary.Models;
+﻿using DinnerRandomizerLibrary.DataAccess.TextHelpers;
+using DinnerRandomizerLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,25 @@ namespace DinnerRandomizerLibrary.DataAccess
     {
         public void CreateRecipe(RecipeModel model)
         {
-            throw new NotImplementedException();
+            List<RecipeModel> recipes = GlobalConfig.RecipeFile.FullFilePath().LoadFile().ConvertToRecipeModel();
+
+            int currentId = 1;
+
+            if (recipes.Count > 0)
+            {
+                currentId = recipes.OrderByDescending(p => p.Id).First().Id + 1;
+            }
+
+            model.Id = currentId;
+
+            recipes.Add(model);
+
+            recipes.SaveToRecipeFile();
         }
 
         public List<RecipeModel> GetAllRecipes()
         {
-            throw new NotImplementedException();
+            return GlobalConfig.RecipeFile.FullFilePath().LoadFile().ConvertToRecipeModel();
         }
     }
 }

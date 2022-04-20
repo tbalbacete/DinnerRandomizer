@@ -55,7 +55,7 @@ namespace DinnerRandomizerLibrary.DataAccess.TextHelpers
 
             foreach (RecipeModel r in models)
             {
-                lines.Add($"{r.Id},{r.Name}{ConvertIngredientListToString(r.Ingredients)}");
+                lines.Add($"{r.Id},{r.Name},{ConvertIngredientListToString(r.Ingredients)}");
             }
 
             File.WriteAllLines(GlobalConfig.RecipeFile.FullFilePath(), lines);
